@@ -1,2 +1,2 @@
 # MADLab
-simple Android apps for MAD 
+Simple Android apps for MAD 
