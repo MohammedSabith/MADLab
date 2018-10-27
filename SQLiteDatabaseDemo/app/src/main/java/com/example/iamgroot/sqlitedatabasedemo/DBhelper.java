@@ -1,0 +1,23 @@
+package com.example.iamgroot.sqlitedatabasedemo;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class DBhelper extends SQLiteOpenHelper {
+    public static String DB_NAME = "studentDB";
+
+    public DBhelper(Context context) {
+        super(context, DB_NAME, null, 1);
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("create table student(name,usn primary key)");
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+    }
+}
